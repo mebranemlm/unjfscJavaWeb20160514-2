@@ -45,7 +45,8 @@ public class UsuarioBean {
 			setUsua(obj.getUsua());
 			setPass(obj.getPass());
 		}
-		JOptionPane.showMessageDialog(null,"El resultado de la validación es: "+ r);
+		//JOptionPane.showMessageDialog(null,"El resultado de la validación es: "+ r);
+		System.out.println("Resultado: "+r);
 		return r;
 	}
 	public void addUsuario() throws Exception

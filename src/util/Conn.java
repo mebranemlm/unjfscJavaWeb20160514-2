@@ -10,7 +10,7 @@ public class Conn {
 	public EntityManagerFactory emf;
 	
 	public void open(){
-		emf=Persistence.createEntityManagerFactory("persis");
+		emf=Persistence.createEntityManagerFactory("pers");
 		em=emf.createEntityManager();
 	}
 	public void close(){
