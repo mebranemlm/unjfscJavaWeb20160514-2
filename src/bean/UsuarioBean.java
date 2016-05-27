@@ -3,6 +3,8 @@ package bean;
 import java.util.Date;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import model.Usuario;
 import daoi.UsuarioDAOI;
 
@@ -30,7 +32,7 @@ public class UsuarioBean {
 		return sw_edit;
 	}
 	
-	public String validateLogin() throws Exception
+	public String validar_login() throws Exception
 	{
 		String r="ERROR";
 		Usuario objusu=new Usuario();
@@ -43,6 +45,7 @@ public class UsuarioBean {
 			setUsua(obj.getUsua());
 			setPass(obj.getPass());
 		}
+		JOptionPane.showMessageDialog(null,"El resultado de la validación es: "+ r);
 		return r;
 	}
 	public void addUsuario() throws Exception

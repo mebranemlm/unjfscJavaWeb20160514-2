@@ -27,9 +27,11 @@
 				<td><h:inputSecret value="#{UsuarioBean.pass}" /></td>
 			</tr>
 			<tr align="center">
-				<td colspan="3"><p:commandButton value="Acceder"
-						action="#{UsuarioBean.validateLogin}" icon="ui-icon-home" />
-					<p:commandButton value="Limpiar" icon="ui-icon-home" /></td>
+				<td colspan="3">
+					<p:commandButton value="Acceder"
+						action="#{UsuarioBean.validar_login}" icon="ui-icon-home" />
+					<p:commandButton value="Limpiar" icon="ui-icon-home" />
+				</td>
 			</tr>
 		</table>
 	</h:form>
