@@ -39,7 +39,7 @@ public class UsuarioBean {
 		obj=usudaoimpl.validateUsua(objusu);
 		if (obj!=null && obj.getUsua()!=null)
 		{
-			r="EXITO";
+			r="SUCCESS";
 			setUsua(obj.getUsua());
 			setPass(obj.getPass());
 		}
