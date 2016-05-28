@@ -97,8 +97,7 @@ public class UsuarioDAOI implements UsuarioDAOL
 		List<Usuario>lista1=null;
 		try 
 		{
-			Query q1=cn.em.createQuery("select a from Usuario a where a.usua= :p1");
-			q1.setParameter("p1", obj.getUsua());
+			Query q1=cn.em.createQuery("select a from Usuario a where a.usua=:p1").setParameter("p1", obj.getUsua());
 			lista1=q1.getResultList();
 			
 		} catch (Exception e) {
