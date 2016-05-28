@@ -76,6 +76,11 @@ public class UsuarioBean {
 		list_size=list_user.size();
 	}
 	
+	public void listUsuario() throws Exception{
+		list_user=usudaoimpl.listUsua();
+		list_size=list_user.size();
+	}
+	
 	public void limpiar()
 	{
 		setUsua(null);

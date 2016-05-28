@@ -107,5 +107,23 @@ public class UsuarioDAOI implements UsuarioDAOL
 		
 	}	
 	
-
+	@Override
+	public List<Usuario> listUsua() throws Exception {
+		cn.open();
+		List<Usuario>lista1=null;
+		try 
+		{
+			Query q1=cn.em.createQuery("select a from Usuario a");
+			lista1=q1.getResultList();
+			
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
+		}
+		return lista1;
+		
+	}	
+	
+	
+	
+	
 }

@@ -12,6 +12,7 @@ public interface UsuarioDAOL
 	public abstract void addUsua(Usuario obj) throws Exception;
 	public abstract void editUsua(Usuario obj) throws Exception;
 	public abstract List<Usuario> questListUsua(Usuario obj) throws Exception;
+	public abstract List<Usuario> listUsua() throws Exception;
 	//elmininar
 	//registrar
 	//...ncosas	

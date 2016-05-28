@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head><title>Listar Usuarios</title></h:head>
+
+<h:body>
+
+	<center><h1>Listar Usuarios</h1></center>
+<h:form>
+<table border="2" align="center">
+	<tr align="center">
+		<td colspan="3">
+			<p:dataTable rows="5" var="listUsuarios" value="#{UsuarioBean.list_user}" border="2" paginator="true">
+				<f:facet name="header">Lista de Usuarios</f:facet>
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Usuario"/>
+						</f:facet>
+						<h:outputText value="#{listUsuarios.usua}"></h:outputText>
+					</p:column>
+					
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Password"/>
+						</f:facet>
+						<h:outputText value="#{listUsuarios.pass}"></h:outputText>
+					</p:column>
+					
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Estado"/>
+						</f:facet>
+						<h:outputText value="#{listUsuarios.esta}"></h:outputText>
+					</p:column>
+					
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Registro"/>
+						</f:facet>
+						<h:outputText value="#{listUsuarios.freg}">
+							<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+						</h:outputText>
+					</p:column>
+					<f:facet name="footer">
+						<h:outputText value="Se encontraron #{UsuarioBean.list_size} registros."></h:outputText>
+					</f:facet>
+			</p:dataTable>
+		</td>
+	</tr>
+</table>
+</h:form>
+
+</h:body>
+
+</html>
+

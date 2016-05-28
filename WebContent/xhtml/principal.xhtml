@@ -60,6 +60,11 @@ table a:hover{
 				<h:commandLink value="Buscar" action="USUARIO_BUSCAR"/>
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<h:commandLink value="Listar" actionListener="#{UsuarioBean.listUsuario}"  action="USUARIO_LISTAR"></h:commandLink>
+			</td>
+		</tr>
 	</table>
 </center>
 </h:form>
