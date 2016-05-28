@@ -31,6 +31,7 @@ table a:hover{
 }
 
 </style>
+<title>Página Principal</title>
 </h:head>
 <h:body>
 <center>
@@ -46,12 +47,12 @@ table a:hover{
 		</tr>
 		<tr>
 			<td>
-				<h:commandLink value="Nuevo" actionListener="Usuario.actionAdd" action="USUARIO"/>
+				<h:commandLink value="Nuevo" actionListener="#{UsuarioBean.actionAdd}" action="USUARIO"/>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<h:commandLink value="Editar" actionListener="Usuario.actionEdit" action="USUARIO"/>
+				<h:commandLink value="Editar" actionListener="#{UsuarioBean.actionEdit}" action="USUARIO"/>
 			</td>
 		</tr>
 		<tr>
