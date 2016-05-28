@@ -7,13 +7,42 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head>
+
+<h:head>
+
+<style>
+table td{
+	background-color: black;
+}
+table td:hover{
+	background-color:purple;
+}
+table th{
+	font-size:23px;
+	background-color:WhiteSmoke;
+}
+table a{
+	text-decoration: none;
+	font-size:20px;
+	color:white;
+}
+table a:hover{
+	color:yellow;
+}
+
+</style>
+</h:head>
 <h:body>
-<h1>Pagina Principal</h1>
+<center>
+	<h1>Página Principal</h1>
+</center>
 <h:form>
-	<table>
+<center>
+	<table border="2" style="border-collapse:collapse;width:200px;text-align:center">
 		<tr>
-			<th>Usuario</th>
+			<th>
+				<h:outputText value="Usuario"/>
+			</th>
 		</tr>
 		<tr>
 			<td>
@@ -31,6 +60,7 @@
 			</td>
 		</tr>
 	</table>
+</center>
 </h:form>
 
 </h:body>
