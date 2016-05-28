@@ -10,6 +10,28 @@
 <h:head></h:head>
 <h:body>
 <h1>Pagina Principal</h1>
+<h:form>
+	<table>
+		<tr>
+			<th>Usuario</th>
+		</tr>
+		<tr>
+			<td>
+				<h:commandLink value="Nuevo" actionListener="Usuario.actionAdd" action="USUARIO"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:commandLink value="Editar" actionListener="Usuario.actionEdit" action="USUARIO"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:commandLink value="Buscar" action="USUARIO_BUSCAR"/>
+			</td>
+		</tr>
+	</table>
+</h:form>
 
 </h:body>
 </html>
