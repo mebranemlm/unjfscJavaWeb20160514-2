@@ -7,10 +7,72 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 
-<head></head>
-<body>
+<h:head>
+<title>
+	<h:outputText value="Agregar Usuario" rendered="#{!UsuarioBean.sw_edit}" />
+	<h:outputText value="Editar Usuario" rendered="#{UsuarioBean.sw_edit}" />
+</title>
+</h:head>
+<h:body>
+<center>
+<h:form>
+
+<table border="2" >
+
+<tr>
+	<th colspan="2">
+		<h:outputText value="Agregar Usuario" rendered="#{!UsuarioBean.sw_edit}" />
+		<h:outputText value="Editar Usuario" rendered="#{UsuarioBean.sw_edit}" />
+	</th>
+</tr>
+<tr>
+	<th>
+		<h:outputText value="Usuario"></h:outputText>
+	</th>
+	<td>
+		<h:inputText value="#{UsuarioBean.usua}" ></h:inputText>
+	</td>
+</tr>
+<tr>
+	<th><h:outputText value="Password"></h:outputText></th>
+	<td>
+		<h:inputText value="#{UsuarioBean.pass}"/>
+	</td>
+</tr>
+<tr>
+	<th><h:outputText value="Estado"></h:outputText></th>
+	<td>
+		<p:selectOneMenu value="#{UsuarioBean.esta}">
+			<f:selectItem itemValue="-1" itemLabel="-Seleccionar-" ></f:selectItem>
+			<f:selectItem itemValue="0" itemLabel="Inactivo" ></f:selectItem>
+			<f:selectItem itemValue="1" itemLabel="Activo" ></f:selectItem>
+		</p:selectOneMenu>
+	</td>
+</tr>
+<tr>
+	<th><h:outputText value="Fecha de Registro"></h:outputText></th>
+	<td>
+		<p:calendar value="#{UsuarioBean.freg}" mode="popup"
+						popupIconOnly="true" showOn="button" pattern="dd/MM/yyyy">
+		</p:calendar>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" align="center">
+		<p:commandButton value="Agregar"
+			actionListener="#{UsuarioBean.addUsuario}" action="SUCCESS"
+			rendered="#{!UsuarioBean.sw_edit}" icon="ui-icon-disk" />
+		<p:commandButton value="Modificar"
+			actionListener="#{UsuarioBean.editUsuario}" action="SUCCESS"
+			rendered="#{UsuarioBean.sw_edit}" />
+	</td>
+</tr>
+
+</table>
 
 
-</body>
+</h:form>
+</center>
+</h:body>
 
 </html>
